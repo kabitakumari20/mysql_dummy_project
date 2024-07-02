@@ -2,10 +2,7 @@ const db = require("../../../db/db")
 
 const addEvent = async (req, res) => {
     try {
-        let {
-            eventName,
-            eventType,
-            venue } = req.body
+        let {eventName,eventType,venue } = req.body
         console.log("req.body========>>", req.body)
         const [result] = await db.query("insert into event(eventName, eventType, venue) values(?, ?,  ?)", [
             eventName,
