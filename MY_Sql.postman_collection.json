@@ -1,0 +1,994 @@
+{
+	"info": {
+		"_postman_id": "62e24ad8-c938-4a5d-995a-359fc984710b",
+		"name": "MY_Sql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27095524"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "addEvent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventType\": \"repblic day\",\r\n    \"eventName\": \"repblic day\",\r\n    \"venue\": \"india\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/event/addEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"addEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventType\": \"Ganesh puja\",\r\n    \"eventName\": \"puja\",\r\n    \"eventPlace\": \"kishnaganj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/event/updateById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"updateById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEvent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/getEvent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"getEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEvent Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/getDataByLimit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"getDataByLimit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEventById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/deleteEventById/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"deleteEventById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDataById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/getDataById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"getDataById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterDataByDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/filterDataByDate?date=2024-06-22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"filterDataByDate"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-06-22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterDataByEventType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/event/filterDataByEventType?eventType=repblic day",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"event",
+								"filterDataByEventType"
+							],
+							"query": [
+								{
+									"key": "eventType",
+									"value": "repblic day"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Diya Doe\",\r\n    \"lastName\": \"Software Engineer\",\r\n    \"email\": \"diya@gmail.com\",\r\n    \"phone\": 726746287,\r\n    \"password\":\"Demo@1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test121@gmail.com\",\r\n    \"password\": \"Demo@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/allUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"allUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLimitedUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getLimitedUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getLimitedUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMinValue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getMinValue?columnName=firstName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getMinValue"
+							],
+							"query": [
+								{
+									"key": "columnName",
+									"value": "firstName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMaxValue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getMinValue?columnName=firstName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getMinValue"
+							],
+							"query": [
+								{
+									"key": "columnName",
+									"value": "firstName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getLike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0MTIxQGdtYWlsLmNvbSIsImlhdCI6MTcxOTIxOTk2M30.MsoEMGc3y62YqIKH8o9avliZYN9g8yU7llIGBYZS7WM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0MTIxQGdtYWlsLmNvbSIsImlhdCI6MTcxOTIwNzM0NX0.nqiI9sui1X-H1nuUoMxWTFN_V2x2MxCe7xzUDeGwLa8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getUserById?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getUserById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDistinctUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI4MzQiLCJpYXQiOjE3MTk1NTkyMjJ9.Pa6MYJvOJo_gydBR0eYj28PmV6tb4nphexDCyPZ-DKo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getDistinctUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getDistinctUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFilteredUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"manvi\",\r\n    \"lastName\": \"Software Engineer\",\r\n    \"email\": \"test12@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/getFilteredUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getFilteredUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFilteredUsersWithOrOprater",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"manvi\",\r\n    \"lastName\": \"Software Engineer\",\r\n    \"email\": \"test12@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/getFilteredUsersWithOrOprater",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getFilteredUsersWithOrOprater"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderBy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/getOrderBy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getOrderBy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderByDes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/getOrderByDes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getOrderByDes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertInto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Ankit\",\r\n    \"lastName\": \"khong\",\r\n    \"email\": \"ankit@gmail.com\",\r\n    \"age\": \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/insertInto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"insertInto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "iSNULLSyntax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/iSNULLSyntax?columnName=manvi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"iSNULLSyntax"
+							],
+							"query": [
+								{
+									"key": "columnName",
+									"value": "manvi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fileUplaod",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/img1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user/fileUplaod",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"fileUplaod"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ptm",
+			"item": [
+				{
+					"name": "addPtm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"venue\": \"haryana\",\r\n    \"startTime\": \"11 AM\",\r\n    \"endTime\": \"12 AM\",\r\n    \"description\": \"It seems like you're trying to create a table named ptm with certain fields in MySQL. However, there are a few issues and corrections needed in your SQL statement. Here's the corrected version with explanations for each correction:\",\r\n    \"meetingPerson\": \"priyanka\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/ptm/addPtm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"ptm",
+								"addPtm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPtmList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/ptm/getPtmList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"ptm",
+								"getPtmList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPtmById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/ptm/getPtmById/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"ptm",
+								"getPtmById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePtmById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"venue\": \"haryana\",\r\n    \"startTime\": \"11 AM\",\r\n    \"endTime\": \"12 AM\",\r\n    \"description\": \"It seems like you're trying to create a table named ptm with certain fields in MySQL. However, there are a few issues and corrections needed in your SQL statement. Here's the corrected version with explanations for each correction:\",\r\n    \"meetingPerson\": \"raju\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/ptm/updatePtmById/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"ptm",
+								"updatePtmById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePtmById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/ptm/deletePtmById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"ptm",
+								"deletePtmById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "createNotes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topicName\": \"testing data\",\r\n    \"title\": \"testing totle\",\r\n    \"description\": \"This function should now allow you to retrieve PTM records from your MySQL database based on the provided ID. Adjust as necessary based on your specific application requirements and database structure.\",\r\n    \"date\": \"2024-07-05\",\r\n    \"chapterNumber\": \"2\",\r\n    \"chapterName\": \"test for test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/notes/createNotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"notes",
+								"createNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNotesById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topicName\": \"New Topic\",\r\n    \"title\": \"New Title\",\r\n    \"description\": \"New Description\",\r\n    \"date\": \"2024-07-02\",\r\n    \"chapterNumber\": 2,\r\n    \"chapterName\": \"New Chapter\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/notes/updateNotesById/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"notes",
+								"updateNotesById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/notes/getNotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"notes",
+								"getNotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteNotesById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/notes/deleteNotesById/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"notes",
+								"deleteNotesById",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNotesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/notes/getNotesById/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"notes",
+								"getNotesById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
