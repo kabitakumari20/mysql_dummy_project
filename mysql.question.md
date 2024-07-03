@@ -56,3 +56,11 @@ LIMIT number;
         const query = "SELECT * FROM user LIMIT ? OFFSET ?";
         const [allUser] = await db.query(query, [limit, offset]);
 
+
+
+
+# INNER JOIN QUERY
+  const [rows] = await db.query(`
+            SELECT * FROM event INNER JOIN ptm ON event.ptmId = ptm.id;
+           
+        `);
